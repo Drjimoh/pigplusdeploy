@@ -20,16 +20,13 @@ class NewRecord(models.Model):
 	def __str__(self):
 		return self.pigname
 
-'''income data
-dateofincome
-typeofincome
-amount
-add comment
+class PigHealth(models.Model):
+	pigname = models.CharField(max_length=20)
+	health_status = models.CharField(max_length=30)
 
-expenditure
-dateofexpenditure
-type 
-amount 
-comment
-'''
+	def add_health_record(self):
+		self.health_status = models.CharField(max_length=30)
+
+	def __str__(self):
+		return self.pigname + ' is ' + self.health_status
 

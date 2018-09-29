@@ -1,0 +1,8 @@
+{%extends 'pigdata/base.html' %}
+  
+
+  {% block content %}
+    <p>{%for healths in health%}
+   <p>{{ healths|linebreaksbr }}</p>
+    {% endfor %} </p>
+{% endblock %}
